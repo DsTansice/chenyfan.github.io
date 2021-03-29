@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ChenYFan/CDN/css/pan/demo.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ChenYFan/CDN/css/pan/component.css" />
+		<script src="https://cdn.jsdelivr.net/gh/ChenYFan/CDN/js/pan/modernizr.custom.js"></script>
+		<title>网盘导航页</title>
+		<script>  
+// 浏览器标题切换  
+var OriginTitile = document.title;    // 保存之前页面标题  
+var titleTime;  
+document.addEventListener('visibilitychange', function(){  
+    if (document.hidden){  
+        document.title = '这里是大型相亲现场：非诚勿扰！有请主持人：孟非！';  
+        
+		clearTimeout(titleTime);  
+    }else{  
+        document.title = '好的，现在...对不起我什么都没说';  
+        titleTime = setTimeout(function() {  
+            document.title = OriginTitile;  
+        }, 2000); // 2秒后恢复原标题  
+    }  
+});  
+</script>  
+	</head>
+	<body>
+		<div class="container">
+			<div id="splitlayout" class="splitlayout">
+				<div class="intro">
+					<div class="side side-left">
+						<header class="codropsheader clearfix">
+							<h1>告诉我,你究竟要哪个?</h1>
+					
+						</header>
+						<div class="intro-content">
+							<div class="profile"><img src="https://cdn.jsdelivr.net/gh/ChenYFan/CDN/img/pan/profile1.jpg" alt="我要这个！"></div>
+							<h1><span><a href="https://pan.cyfan.top">EncodeExplorer</a></span><span>基于PHP的目录列表程序</span></h1>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<div class="side side-right">
+						<div class="intro-content">
+							<div class="profile"><img src="https://cdn.jsdelivr.net/gh/ChenYFan/CDN/img/pan/profile2.jpg" alt="我选这个！"></div>
+							<h1><span><a href="https://drive.cyfan.top">GDIndex</a></span><span>基于rClone的目录列表程序</span></h1>
+						</div>
+						<div class="overlay"></div>
+					</div>
+				</div><!-- /intro -->
+				<div class="page page-left">
+					<div class="page-inner">
+						<section>
+							<h2>EncodeExplorer</h2>
+							</p><p><a href="https://pan.cyfan.top">点此前去骚扰</a></p>
+							<p>这是一个强大的PHP目录列表程序（懒~~）</p>
+							<p>位置：Heroku</p><p>加速：CloudFlare香港CN2</p><p>爱吃：小软件、绿色软件、自行编译软件</p><p>性格：第一次骚扰时通常在睡觉，唤醒很慢很慢，大约5s（所以说很懒嘛）</p><p>允许为了加快下载速度使用IDM多线程</p><p>每个月最多工作550hours，多了就会傲娇</p>
+							<h3>简介</h3>
+							<p>由于其还负担了一些这个年纪不应该负担的东西（API），所以通常情况下白天比较精神，晚上被打搅基本很愤怒</p>
+							<p>一般性由于过懒，所以请求CloudFlareCDN时会强行<del>女王指令到！</del>缓存8小时以节省睡觉时间</p>
+							<p>作为一个女生<del>咦，你怎么知道人家是男是女（笑）</del>，本来就不是设计来存储大量东西的，饭量最多500MB</p>
+							<p>最高<del> 插入速度 </del>下行速度:2MB/s</p>
+							</section>
+					</div><!-- /page-inner -->
+				</div><!-- /page-right -->
+				<div class="page page-right">
+					<div class="page-inner">
+						<section>
+							<h2>GoogleDriveIndex</h2>
+							</p><p><a href="https://drive.cyfan.top">点此前去骚扰</a></p>
+							<p>这是一个依赖于CloudFlareWorkers列表程序<del>（咦,CF他不是Heroku的嘛~~）</del></p>
+							<p>位置：Google云《=》CloudFlareCDN</p><p>加速：CloudFlare香港CN2</p><p>爱吃：较大文件、视频</p><p>性格：勤勤恳恳，可惜申国对她很不友好，结果只能依靠朋友CloudFlareWorkers实现国内访问，现已成功镜像</p><p>IDM，No！（Workers也是有忍耐程度的！1000/min，最多了！）</p><p>每日能吐1TB，<del>所以你就使劲搞吧</del></p>
+							<h3>简介</h3>
+							<p><del>为了防止被喂河蟹，她设置了密码保护自己，不过放了条游客线，账号是User，密码也是User哦！</del>太麻烦了，懒得加密码了</p>
+							<p>虽然也是个女生<del>咦，你怎么又知道人家是男是女（手动滑稽）</del>，但照样能吃15GB文件</p>
+								<p>最高<del> 抽插速度 </del>上行速度：5MB/s（游客禁用） 下行速度:1.4MB/s</p>
+							</section>	</section>
+					</div><!-- /page-inner -->
+				</div><!-- /page-left -->
+				<a href="#" class="back back-right" title="回去？">&rarr;</a>
+				<a href="#" class="back back-left" title="回去？">&larr;</a>
+			</div><!-- /splitlayout -->
+		</div><!-- /container -->
+		<script src="https://cdn.jsdelivr.net/gh/ChenYFan/cdn/js/pan/classie.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/ChenYFan/cdn/js/pan/cbpSplitLayout.js"></script>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Ways To Contact ChenYF</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ChenYFan/cdn/css/chenyfan.github.io/default.css">
+	<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ChenYFan/cdn/css/chenyfan.github.io/styles.css">
+</head>
+<body>
+	<nav class="nav">
+	  <div class="burger">
+	    <div class="burger__patty"></div>
+	  </div>
+
+	  <ul class="nav__list">
+	     <li class="nav__item">
+	      <a href="#0" class="nav__link"><i class="fa fa-rss"></i></a>
+	    </li>
+	    <li class="nav__item">
+	      <a href="#1" class="nav__link"><i class="fa fa-github"></i></a>
+	    </li>
+	    <li class="nav__item">
+	      <a href="#2" class="nav__link"><i class="fa fa-twitter"></i></a>
+	    </li>
+	    <li class="nav__item">
+	      <a href="#3" class="nav__link"><i class="fa fa-telegram"></i></a>
+	    </li>
+	    <li class="nav__item">
+	      <a href="#4" class="nav__link"><i class="fa fa-envelope"></i></a>
+	    </li>
+		 
+	  </ul>
+	</nav>
+
+
+	<section class="panel b-#fff" id="0">
+	  <article class="panel__wrapper">
+	    <div class="panel__content"><a href="#1">
+	      <h1 class="panel__headline"><i class="fa fa-rss"></i>|如何联系到CYF</h1></a>
+	      <div class="panel__block"></div>
+	      
+	      <p>以下列出了CYF在公共场合内会于用户交流的方式，不包括QQ或微信一类泄露我个人隐私的方式，也不包括在<a href="https://blog.cyfan.top">博客</a>底下留言的方式，请知晓。</p>
+	    </div>
+	  </article>
+	</section>
+
+	<section class="panel b-black" id="1">
+	  <article class="panel__wrapper">
+	    <div class="panel__content"><a href="https://github.com/ChenYFan">
+	      <h1 class="panel__headline" style="color: #fff" ><i class="fa fa-github"></i>|Github</h1></a>
+	      <div class="panel__block" style="color: #fff"></div>
+	      
+	      <p style="color: #fff">呜呜呜，<del>抱大腿</del>,看到好康的给个Star好不好,( ′ 3`) 谢谢!<del>Github作为全球最著名的同性交友网站</del>，就是放代码的啦</p>
+	    </div>
+	  </article>
+	</section>
+	<section class="panel b-blue" id="2">
+	  <article class="panel__wrapper">
+	    <div class="panel__content"><a href="https://twitter.com/ChenYF_OHHH">
+	      <h1 class="panel__headline" style="color: #fff"><i class="fa fa-twitter"></i>|Twitter</h1></a>
+	      <div class="panel__block" style="color: #fff"></div>
+	      <p style="color: #fff">拿来玩的,顺便结交一下带佬!!!这是作为最主要的社交方式<del>【快来调戏我啊】</del></p>
+	    </div>
+	  </article>
+	</section>
+	<section class="panel b-yellow" id="3">
+	  <article class="panel__wrapper">
+	    <div class="panel__content"><a href="https://t.me/blogcyf">
+	      <h1 class="panel__headline"><i class="fa fa-telegram"></i>|Telegram</h1></a>
+	      <div class="panel__block"></div>
+	      <p>默认进入的是TG公告群，但和划水群没什么区别，我会偶尔看一下的。</br>或者你也可以点击 <a href="https://t.me/ChenYFan">这里</a> 与CYF直接取得联系</p>
+	    </div>
+	  </article>
+	</section>
+	<section class="panel b-green" id="4">
+	  <article class="panel__wrapper">
+	    <div class="panel__content"><a href="mailto:chenyf@cyfan.top">
+	      <h1 class="panel__headline"><i class="fa fa-envelope"></i>|Email</h1></a>
+	      <div class="panel__block"></div>
+	      
+	      <p>准确地来说，这个邮箱托管于腾讯企业邮箱，地址是 <a href="mailto:chenyf@cyfan.top"> chenyf@cyfan.top </a></br>这应该是我回应最快的联系方式了。</p>
+	    </div>
+	  </article>
+	</section>
+	
+	<script src='https://cdn.jsdelivr.net/gh/ChenYFan/cdn/js/chenyfan.github.io/stopExecutionOnTimeout.js?t=1'></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@2.1.1/dist/jquery.min.js"></script>
+	<script>
+	var menu = document.querySelector('.nav__list');
+	var burger = document.querySelector('.burger');
+	var doc = $(document);
+	var l = $('.scrolly');
+	var panel = $('.panel');
+	var vh = $(window).height();
+	var openMenu = function () {
+	    burger.classList.toggle('burger--active');
+	    menu.classList.toggle('nav__list--active');
+	};
+	panel.eq(0).find('.panel__content').addClass('panel__content--active');
+	var scrollFx = function () {
+	    var ds = doc.scrollTop();
+	    var of = vh / 4;
+	    for (var i = 0; i < panel.length; i++) {
+	        if (window.CP.shouldStopExecution(1)) {
+	            break;
+	        }
+	        if (panel.eq(i).offset().top < ds + of) {
+	            panel.eq(i).find('.panel__content').addClass('panel__content--active');
+	        } else {
+	            panel.eq(i).find('.panel__content').removeClass('panel__content--active');
+	        }
+	    }
+	    window.CP.exitedLoop(1);
+	};
+	var scrolly = function (e) {
+	    e.preventDefault();
+	    var target = this.hash;
+	    var $target = $(target);
+	    $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 300, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	};
+	var init = function () {
+	    burger.addEventListener('click', openMenu, false);
+	    window.addEventListener('scroll', scrollFx, false);
+	    window.addEventListener('load', scrollFx, false);
+	    $('a[href^="#"]').on('click', scrolly);
+	};
+	doc.on('ready', init);
+	</script>
+</body>
+</html>
